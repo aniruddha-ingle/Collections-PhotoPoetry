@@ -51,6 +51,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#efe6dc",
     padding: "50px 0",
   },
+  backdrop: {
+    zIndex: theme.zIndex.drawer + 1,
+    background: "linear-gradient(45deg, #cbab89 70%, #bc8c61 100%)",
+  },
 }));
 
 export default useStyles;

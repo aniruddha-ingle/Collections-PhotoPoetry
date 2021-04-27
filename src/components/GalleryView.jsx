@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import {
     Typography,
     Button,
@@ -7,6 +8,7 @@ import {
     CardMedia,
     Grid,
     Container,
+    Backdrop
 } from "@material-ui/core";
 import useStyles from "../styles";
 
@@ -24,6 +26,13 @@ const cards = [
 
 const GalleryView = () => {
     const classes = useStyles();
+    const [open, setOpen] = useState(false);
+    const handleClose = () => {
+      setOpen(false);
+    };
+    const handleToggle = () => {
+      setOpen(!open);
+    };
     return ( 
         <Container className={classes.cardGrid} maxWidth="lg">
           <Grid container spacing={4}>
@@ -61,9 +70,13 @@ const GalleryView = () => {
                       style={{ marginRight: "30px" }}
                       className={classes.buttonCard}
                       size="small"
+                      onClick={handleToggle}
                     >
                       Read Poem
                     </Button>
+                    <Backdrop className={classes.backdrop} open={open} onClick={handleClose}>
+                        <Typography variant="h1" color="inherit">Hello There!{card.title}</Typography>
+                    </Backdrop>
                     <Button
                       style={{ marginLeft: "30px" }}
                       className={classes.buttonCard}
