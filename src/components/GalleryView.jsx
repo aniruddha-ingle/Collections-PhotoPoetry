@@ -11,17 +11,24 @@ import {
     Backdrop
 } from "@material-ui/core";
 import useStyles from "../styles";
+import Poem from './Poem';
 
 const cards = [
-    { id: 1, title: "The Flower" },
-    { id: 2, title: "Moon & Stars" },
-    { id: 3, title: "Beauty & The Beast" },
-    { id: 4, title: "Live, Laugh." },
-    { id: 5, title: "Fighter" },
-    { id: 6, title: "Amnesty" },
-    { id: 7, title: "Clement" },
-    { id: 8, title: "Tumult" },
-    { id: 9, title: "Bite." },
+    { id: 1, title: "The Flower", 
+    poem: 
+    ["The beauty in her eyes were worth the pain,", 
+    "Very little to lose much to gain,",
+    "Who sings like a daisy and shines like a sunflower",
+    "Who wins my heart? My little Flower!"] 
+    },
+    { id: 2, title: "Moon & Stars", poem: ["Hey", "I Found Love!"] },
+    { id: 3, title: "Beauty & The Beast", poem: ["Hey", "I Found Love!"] },
+    { id: 4, title: "Live, Laugh.", poem: ["Hey", "I Found Love!"] },
+    { id: 5, title: "Fighter", poem: ["Hey", "I Found Love!"] },
+    { id: 6, title: "Amnesty", poem: ["Hey", "I Found Love!"] },
+    { id: 7, title: "Clement", poem: ["Hey", "I Found Love!"] },
+    { id: 8, title: "Tumult", poem: ["Hey", "I Found Love!"] },
+    { id: 9, title: "Bite.", poem: ["Hey", "I Found Love!"] },
   ];
 
 const GalleryView = () => {
@@ -79,7 +86,7 @@ const GalleryView = () => {
                       Read Poem
                     </Button>
                     <Backdrop className={classes.backdrop} open={open} onClick={handleClose}>
-                        
+                        <Poem buttonId={buttonId} cards={cards}></Poem>
                     </Backdrop>
                     <Button
                       style={{ marginLeft: "30px" }}
