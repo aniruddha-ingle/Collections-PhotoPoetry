@@ -27,10 +27,13 @@ const cards = [
 const GalleryView = () => {
     const classes = useStyles();
     const [open, setOpen] = useState(false);
+    const [buttonId, setbuttonId] = useState(0);
     const handleClose = () => {
       setOpen(false);
     };
-    const handleToggle = () => {
+    const handleToggle = (e) => {
+      const id = e.currentTarget.id;
+      setbuttonId(id-1);
       setOpen(!open);
     };
     return ( 
@@ -48,7 +51,7 @@ const GalleryView = () => {
                     <Typography
                       style={{ textAlign: "center" }}
                       variant="h6"
-                      gutterbottom
+                      gutterBottom
                     >
                       {card.title}
                     </Typography>
@@ -66,7 +69,8 @@ const GalleryView = () => {
                       marginBottom: "10px",
                     }}
                   >
-                    <Button
+                    <Button 
+                      id={card.id}
                       style={{ marginRight: "30px" }}
                       className={classes.buttonCard}
                       size="small"
@@ -75,7 +79,7 @@ const GalleryView = () => {
                       Read Poem
                     </Button>
                     <Backdrop className={classes.backdrop} open={open} onClick={handleClose}>
-                        <Typography variant="h1" color="inherit">Hello There!{card.title}</Typography>
+                        
                     </Backdrop>
                     <Button
                       style={{ marginLeft: "30px" }}

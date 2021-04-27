@@ -88,14 +88,14 @@ const App = () => {
         {viewHandler()}
       </main>
       <footer className={classes.footer}>
-        <Typography variant="h6" align="center" gutterbottom>
+        <Typography variant="h6" align="center" gutterBottom>
           Project by Rahul Terwankar & Aniruddha Ingle
         </Typography>
         <Typography
           variant="subtitle2"
           color="textSecondary"
           align="center"
-          gutterbottom
+          gutterBottom
         >
           Beauty surrounds you if you have the time to look around you. Take a
           moment to enjoy the life within and outside of yourself.
