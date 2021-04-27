@@ -14,6 +14,18 @@ import useStyles from "./styles";
 import GalleryView from "./components/GalleryView";
 
 const App = () => {
+  const cards = [
+    { id: 1, title: "The Flower", poem: ["The beauty in her eyes is worth the pain,", "Who wins my heart? My little Flower!"], about: ["This is about the image 1"]},
+    { id: 2, title: "Moon & Stars", poem: ["Hey", "I Found Love!"], about: ["This is about the image 2"] },
+    { id: 3, title: "Beauty & The Beast", poem: ["Hey", "I Found Love!"], about: ["This is about the image 3"] },
+    { id: 4, title: "Live, Laugh.", poem: ["Hey", "I Found Love!"], about: ["This is about the image 4"] },
+    { id: 5, title: "Fighter", poem: ["Hey", "I Found Love!"], about: ["This is about the image 5"] },
+    { id: 6, title: "Amnesty", poem: ["Hey", "I Found Love!"], about: ["This is about the image 6"] },
+    { id: 7, title: "Clement", poem: ["Hey", "I Found Love!"], about: ["This is about the image 7"] },
+    { id: 8, title: "Tumult", poem: ["Hey", "I Found Love!"], about: ["This is about the image 8"] },
+    { id: 9, title: "Bite.", poem: ["Hey", "I Found Love!"], about: ["This is about the image 9"] },
+  ];
+
   const classes = useStyles();
   const [viewKind, setViewKind] = useState("");
   const galleryViewHandler = () => {
@@ -26,7 +38,7 @@ const App = () => {
     setViewKind("Scroll");
   }
   const viewHandler = () => {
-    if(viewKind === "Gallery") return <GalleryView/>
+    if(viewKind === "Gallery") return <GalleryView cards={cards} />
     else if (viewKind === "Scroll") return <Typography align="center" variant="h1">Scroll View</Typography>
   }
   return (

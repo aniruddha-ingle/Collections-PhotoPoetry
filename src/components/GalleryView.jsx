@@ -12,37 +12,31 @@ import {
 } from "@material-ui/core";
 import useStyles from "../styles";
 import Poem from './Poem';
+import AboutPhoto from './AboutPhoto';
 
-const cards = [
-    { id: 1, title: "The Flower", 
-    poem: 
-    ["The beauty in her eyes were worth the pain,", 
-    "Very little to lose much to gain,",
-    "Who sings like a daisy and shines like a sunflower",
-    "Who wins my heart? My little Flower!"] 
-    },
-    { id: 2, title: "Moon & Stars", poem: ["Hey", "I Found Love!"] },
-    { id: 3, title: "Beauty & The Beast", poem: ["Hey", "I Found Love!"] },
-    { id: 4, title: "Live, Laugh.", poem: ["Hey", "I Found Love!"] },
-    { id: 5, title: "Fighter", poem: ["Hey", "I Found Love!"] },
-    { id: 6, title: "Amnesty", poem: ["Hey", "I Found Love!"] },
-    { id: 7, title: "Clement", poem: ["Hey", "I Found Love!"] },
-    { id: 8, title: "Tumult", poem: ["Hey", "I Found Love!"] },
-    { id: 9, title: "Bite.", poem: ["Hey", "I Found Love!"] },
-  ];
 
-const GalleryView = () => {
+const GalleryView = ({cards}) => {
     const classes = useStyles();
-    const [open, setOpen] = useState(false);
+    const [openPoem, setOpenPoem] = useState(false);
+    const [openAbout, setOpenAbout] = useState(false);
     const [buttonId, setbuttonId] = useState(0);
-    const handleClose = () => {
-      setOpen(false);
+
+    const handlePoemClose = () => {
+      setOpenPoem(false);
     };
-    const handleToggle = (e) => {
+    const handleAboutClose = () => {
+      setOpenAbout(false);
+    }
+    const handlePoemToggle = (e) => {
       const id = e.currentTarget.id;
       setbuttonId(id-1);
-      setOpen(!open);
+      setOpenPoem(!openPoem);
     };
+    const handleAboutToggle = (e) => {
+      const id = e.currentTarget.id;
+      setbuttonId(id-1);
+      setOpenAbout(!openAbout);
+    }
     return ( 
         <Container className={classes.cardGrid} maxWidth="lg">
           <Grid container spacing={4}>
@@ -81,21 +75,27 @@ const GalleryView = () => {
                       style={{ marginRight: "30px" }}
                       className={classes.buttonCard}
                       size="small"
-                      onClick={handleToggle}
+                      color="primary"
+                      onClick={handlePoemToggle}
                     >
                       Read Poem
                     </Button>
-                    <Backdrop className={classes.backdrop} open={open} onClick={handleClose}>
+                    <Backdrop className={classes.backdrop} open={openPoem} onClick={handlePoemClose}>
                         <Poem buttonId={buttonId} cards={cards}></Poem>
                     </Backdrop>
                     <Button
+                      id={card.id}
                       style={{ marginLeft: "30px" }}
                       className={classes.buttonCard}
                       size="small"
                       color="primary"
+                      onClick={handleAboutToggle}
                     >
                       About Photo
                     </Button>
+                    <Backdrop className={classes.backdrop} open={openAbout} onClick={handleAboutClose}>
+                        <AboutPhoto buttonId={buttonId} cards={cards}></AboutPhoto>
+                    </Backdrop>
                   </CardActions>
                 </Card>
               </Grid>
