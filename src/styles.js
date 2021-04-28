@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     background: "linear-gradient(45deg, #cbab89 70%, #bc8c61 100%)",
-    padding: "50px",
+    padding: "60px",
   },
   buttons: {
     marginTop: "40px",
@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     border: "1px solid black",
   },
   cardGrid: {
-    padding: "20px 0",
+    padding: "20px 20px",
   },
   card: {
     height: "100%",
@@ -42,19 +42,27 @@ const useStyles = makeStyles((theme) => ({
     borderColor: "#bc8c61",
   },
   cardMedia: {
-    paddingTop: "56.25%", // 16:9 ratio
+    paddingTop: "100%", // 16:9 ratio
   },
   cardContent: {
     flexGrow: 1,
   },
   footer: {
-    backgroundColor: "#efe6dc",
-    padding: "50px 0",
+    background: "linear-gradient(45deg, #cbab89 70%, #bc8c61 100%)",
+    padding: "30px 0",
   },
   backdrop: {
     zIndex: theme.zIndex.drawer + 1,
     background: "linear-gradient(45deg, #cbab89 70%, #bc8c61 100%)",
   },
+  img: {
+    paddingTop: "100%", // 16:9 ratio
+    
+  },
+  cardHolder: {
+    padding: "50px 50px",
+    backgroundColor: "#d2bfad"
+  }
 }));
 
 export default useStyles;

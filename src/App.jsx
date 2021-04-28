@@ -12,6 +12,8 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import { PhotoCamera } from "@material-ui/icons";
 import useStyles from "./styles";
 import GalleryView from "./components/GalleryView";
+import Description from "./components/Description";
+import ScrollView from "./components/ScrollView";
 
 const App = () => {
   const cards = [
@@ -27,19 +29,20 @@ const App = () => {
   ];
 
   const classes = useStyles();
-  const [viewKind, setViewKind] = useState("");
+  const [viewKind, setViewKind] = useState("Description");
   const galleryViewHandler = () => {
       setViewKind("Gallery");
     }
-  const homeViewHandler = () => {
-    setViewKind("");
+  const descViewHandler = () => {
+    setViewKind("Description");
   }
   const scrollViewHandler = () => {
     setViewKind("Scroll");
   }
   const viewHandler = () => {
     if(viewKind === "Gallery") return <GalleryView cards={cards} />
-    else if (viewKind === "Scroll") return <Typography align="center" variant="h1">Scroll View</Typography>
+    else if (viewKind === "Scroll") return <ScrollView cards={cards} />
+    else if (viewKind === "Description") return <Description/>
   }
   return (
     <React.Fragment>
@@ -84,8 +87,8 @@ const App = () => {
                   </Button>
                 </Grid>
                 <Grid item>
-                  <Button onClick={homeViewHandler} variant="contained" className={viewKind==="" ? classes.buttonSelected : classes.button}>
-                    Home Page
+                  <Button onClick={descViewHandler} variant="contained" className={viewKind==="Description" ? classes.buttonSelected : classes.button}>
+                    Description
                   </Button>
                 </Grid>
                 <Grid item>
@@ -97,22 +100,24 @@ const App = () => {
             </div>
           </Container>
         </div>
-        {viewHandler()}
+        <div style={{padding:"30px", backgroundColor:"#efe6dc"}}>
+          {viewHandler()}
+        </div>
+        <footer className={classes.footer}>
+          <Typography variant="h6" align="center" gutterBottom>
+            Project by Rahul Terwankar & Aniruddha Ingle
+          </Typography>
+          <Typography
+            variant="subtitle2"
+            color="textSecondary"
+            align="center"
+            gutterBottom
+          >
+            Beauty surrounds you if you have the time to look around you. Take a
+            moment to enjoy the life within and outside of yourself.
+          </Typography>
+        </footer>
       </main>
-      <footer className={classes.footer}>
-        <Typography variant="h6" align="center" gutterBottom>
-          Project by Rahul Terwankar & Aniruddha Ingle
-        </Typography>
-        <Typography
-          variant="subtitle2"
-          color="textSecondary"
-          align="center"
-          gutterBottom
-        >
-          Beauty surrounds you if you have the time to look around you. Take a
-          moment to enjoy the life within and outside of yourself.
-        </Typography>
-      </footer>
     </React.Fragment>
   );
 };
