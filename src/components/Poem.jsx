@@ -6,7 +6,7 @@ const Poem = ({buttonId, cards}) => {
     return ( 
         <div>
             <Typography gutterBottom variant="h1"> {cards[buttonId]["title"]}</Typography>
-            {cards[buttonId]["poem"].map((line) => (<Typography key={nextId()} variant="h5">{line}</Typography>))}
+            {cards[buttonId]["poem"].map((line) => (<Typography key={nextId()} variant="h5">{line + cards[buttonId].id}</Typography>))}
         </div>
     );
 }

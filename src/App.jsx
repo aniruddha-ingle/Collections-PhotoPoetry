@@ -17,15 +17,15 @@ import ScrollView from "./components/ScrollView";
 
 const App = () => {
   const cards = [
-    { id: 1, title: "The Flower", poem: ["The beauty in her eyes is worth the pain,", "Who wins my heart? My little Flower!"], about: ["This is about the image 1"]},
-    { id: 2, title: "Moon & Stars", poem: ["Hey", "I Found Love!"], about: ["This is about the image 2"] },
-    { id: 3, title: "Beauty & The Beast", poem: ["Hey", "I Found Love!"], about: ["This is about the image 3"] },
-    { id: 4, title: "Live, Laugh.", poem: ["Hey", "I Found Love!"], about: ["This is about the image 4"] },
-    { id: 5, title: "Fighter", poem: ["Hey", "I Found Love!"], about: ["This is about the image 5"] },
-    { id: 6, title: "Amnesty", poem: ["Hey", "I Found Love!"], about: ["This is about the image 6"] },
-    { id: 7, title: "Clement", poem: ["Hey", "I Found Love!"], about: ["This is about the image 7"] },
-    { id: 8, title: "Tumult", poem: ["Hey", "I Found Love!"], about: ["This is about the image 8"] },
-    { id: 9, title: "Bite.", poem: ["Hey", "I Found Love!"], about: ["This is about the image 9"] },
+    { id: 1, title: "The Flower", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "]},
+    { id: 2, title: "Moon & Stars", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "] },
+    { id: 3, title: "Beauty & The Beast", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "] },
+    { id: 4, title: "Live, Laugh.", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "] },
+    { id: 5, title: "Fighter", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "] },
+    { id: 6, title: "Amnesty", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "] },
+    { id: 7, title: "Clement", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "] },
+    { id: 8, title: "Tumult", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "] },
+    { id: 9, title: "Bite.", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "] },
   ];
 
   const classes = useStyles();
