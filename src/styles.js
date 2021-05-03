@@ -1,5 +1,4 @@
 import { makeStyles } from "@material-ui/core/styles";
-import { BorderAllRounded } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   sheet: {
@@ -15,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     background: "linear-gradient(45deg, #cbab89 70%, #bc8c61 100%)",
-    padding: "60px",
+    padding: "15px",
   },
   buttons: {
     marginTop: "40px",
@@ -52,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
   },
   footer: {
     background: "linear-gradient(45deg, #cbab89 70%, #bc8c61 100%)",
-    padding: "30px 0",
+    padding: "20px 0",
   },
   backdrop: {
     zIndex: theme.zIndex.drawer + 1,
@@ -64,7 +63,9 @@ const useStyles = makeStyles((theme) => ({
   },
   cardHolder: {
     padding: "50px 50px",
-    backgroundColor: "#ede5de"
+    backgroundColor: "#ede5de",
+    width: "900px",
+    height: "auto",
   }
 }));
 

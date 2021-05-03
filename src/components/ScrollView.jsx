@@ -1,50 +1,66 @@
-import React from 'react';
+import React from "react";
 import {
-    Typography,
-    Card,
-    CardContent,
-    CardMedia,
-    Grid,
-    Container,
+  Typography,
+  Card,
+  CardContent,
+  CardMedia,
+  Grid,
+  Container,
+  ThemeProvider,
 } from "@material-ui/core";
+import { createMuiTheme } from "@material-ui/core/styles";
 import useStyles from "../styles";
+import nextId from "react-id-generator";
 
+const ScrollView = ({ cards }) => {
+  const classes = useStyles();
+  const theme = createMuiTheme({
+    typography: {
+      body1: {
+        fontSize: 22,
+        fontFamily: "sans-serif",
+      },
+    },
+  });
 
-const ScrollView = ({cards}) => {
-    const classes = useStyles();
-
-    return ( 
-        <Container className={classes.cardGrid} maxWidth="md">
-            <Grid container spacing={4}>
-                {cards.map((card) => (
-                <Grid item key={card.id}>
-                    <Card className={classes.cardHolder}>
-                    <Typography
-                        style={{ backgroundColor:"#d2bfad", textAlign: "center" }}
-                        variant="h2"
-                        gutterBottom
-                        >
-                        {card.title}
-                    </Typography>
-                    <CardMedia
-                        className={classes.cardMedia}
-                        image={card.image}
-                    />
-                    <CardContent className={classes.cardContent}>
-                        <Typography style={{ textAlign: "center" }} variant="h6">
-                        This is a media card.<br/> 
-                        This will be used to create a post
-                        for Rahul's Images. This is a media card. This will be
-                        used to create a post for Rahul's Images.
-                        </Typography>
-                    </CardContent>
-                    </Card>
-                    <br/>
-                </Grid>
+  return (
+    <Container className={classes.cardGrid} maxWidth="md">
+      <Grid container spacing={4}>
+        {cards.map((card) => (
+          <Grid item key={card.id}>
+            <Card className={classes.cardHolder}>
+              <Typography
+                style={{ backgroundColor: "#d2bfad", textAlign: "center" }}
+                variant="h2"
+                gutterBottom
+              >
+                {card.title}
+              </Typography>
+              <CardMedia className={classes.cardMedia} image={card.image} />
+              <br />
+              <CardContent className={classes.cardContent}>
+                {card["poem"].map((line) => (
+                  <div>
+                    <ThemeProvider theme={theme}>
+                      <Typography
+                        style={{ color: "#594127", textAlign: "center" }}
+                        key={nextId()}
+                        variant="body1"
+                        theme={theme}
+                      >
+                        {line}
+                      </Typography>
+                    </ThemeProvider>
+                  </div>
                 ))}
-            </Grid>
-        </Container>
-    );
-}
- 
+              </CardContent>
+            </Card>
+            <br />
+          </Grid>
+        ))}
+      </Grid>
+    </Container>
+  );
+};
+
 export default ScrollView;

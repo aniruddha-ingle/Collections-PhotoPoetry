@@ -8,26 +8,14 @@ import {
   Toolbar,
   Container,
 } from "@material-ui/core";
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import { PhotoCamera } from "@material-ui/icons";
 import useStyles from "./styles";
 import GalleryView from "./components/GalleryView";
 import Description from "./components/Description";
 import ScrollView from "./components/ScrollView";
-import Images from "./images/index"
+import cards from "./components/CardsData";
 
 const App = () => {
-  const cards = [
-    { id: 1, title: "The Flower", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "], image: Images.img_1},
-    { id: 2, title: "Moon & Stars", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "], image: Images.img_2},
-    { id: 3, title: "Beauty & The Beast", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "], image: Images.img_3},
-    { id: 4, title: "Live, Laugh.", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "], image: Images.img_4},
-    { id: 5, title: "Fighter", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "], image: Images.img_5},
-    { id: 6, title: "Amnesty", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "], image: Images.img_6},
-    { id: 7, title: "Clement", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "], image: Images.img_7},
-    { id: 8, title: "Tumult", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "], image: Images.img_8},
-    { id: 9, title: "Bite.", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "], image: Images.img_9},
-  ];
 
   const classes = useStyles();
   const [viewKind, setViewKind] = useState("Description");
@@ -52,7 +40,7 @@ const App = () => {
         <Toolbar className={classes.toolbar}>
           -
           <PhotoCamera className={classes.icon} />
-          <Typography variant="h6">Through the Looking Glass</Typography>
+          <Typography variant="h6">Photographs of Poetic Memories</Typography>
         </Toolbar>
       </AppBar>
       <main className={classes.sheet}>
@@ -62,23 +50,47 @@ const App = () => {
               {"C O L L E C T I O N S"}
             </Typography>
             <Typography
+                variant="subtitle1"
+                align="center"
+                color="textPrimary"
+                gutterBottom
+                >
+                The goal of this project is to reconcile the <i>vision</i> of <b>Photography</b> with the <i>poise</i> of <b>Poetry</b>.
+                </Typography>
+            <Typography
               variant="h6"
               align="center"
               color="textPrimary"
               gutterBottom
             >
-              With Love by Rahul Terwankar
+              By Rahul Terwankar
             </Typography>
             <Typography
               variant="subtitle1"
               align="center"
               color="textSecondary"
             >
-              An archival record of the beauty I see in many mundane things
-              around me. There are many short glimpeses of this beauty that
-              surrounds me, gathering static in my camera roll. So, I decided to
-              share them with you. Hoping to inspire you to look at the everyday
-              things with a special appreciation.
+              Who is a keen observer of his surroundings and maintains an aesthetic vault of many memories through his lens.
+              If we were at a college event or on a trip to the mountains with Rahul, it was customary for us to text him and ask for the lovely, tasteful, and candid memories he captured. 
+              When we did get the link, it was customary to hope we could find ourselves in those memories. 
+            </Typography>
+            <Typography
+              variant="h6"
+              align="center"
+              color="textPrimary"
+              gutterBottom
+            >
+               And Aniruddha Ingle
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              align="center"
+              color="textSecondary"
+            >
+              Who is typing this with the intention of being your narrator through this journey, <i>kya scene?</i><br/> 
+              I met Rahul during my bachelor's degree, he was the senior that behaved like a kind older brother. 
+              His appreciation for my poetry and permision to use his pictures to build this website have made this project possible. Thanks, Rahul!
+               
             </Typography>
             <div className={classes.buttons}>
               <Grid container spacing={2} justify="center">
@@ -101,12 +113,12 @@ const App = () => {
             </div>
           </Container>
         </div>
-        <div style={{padding:"30px", backgroundColor:"#efe6dc"}}>
+        <div style={{padding:"15px", backgroundColor:"#efe6dc"}}>
           {viewHandler()}
         </div>
         <footer className={classes.footer}>
           <Typography variant="h6" align="center" gutterBottom>
-            Project by Rahul Terwankar & Aniruddha Ingle
+            A Project by Rahul Terwankar & Aniruddha Ingle
           </Typography>
           <Typography
             variant="subtitle2"
