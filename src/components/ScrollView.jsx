@@ -17,7 +17,7 @@ const ScrollView = ({ cards }) => {
   const theme = createMuiTheme({
     typography: {
       body1: {
-        fontSize: 22,
+        fontSize: 20,
         fontFamily: "sans-serif",
       },
     },

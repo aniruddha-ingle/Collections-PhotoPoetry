@@ -59,14 +59,13 @@ const useStyles = makeStyles((theme) => ({
   },
   img: {
     paddingTop: "100%", // 16:9 ratio
-    
   },
   cardHolder: {
     padding: "50px 50px",
     backgroundColor: "#ede5de",
-    width: "900px",
+    width: "950px",
     height: "auto",
-  }
+  },
 }));
 
 export default useStyles;

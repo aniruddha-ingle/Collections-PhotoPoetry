@@ -65,7 +65,6 @@ const GalleryView = ({ cards }) => {
               >
                 <Button
                   id={card.id}
-                  style={{ marginRight: "30px" }}
                   className={classes.buttonCard}
                   size="small"
                   color="primary"
@@ -79,23 +78,6 @@ const GalleryView = ({ cards }) => {
                   onClick={handlePoemClose}
                 >
                   <Poem buttonId={buttonId} cards={cards}></Poem>
-                </Backdrop>
-                <Button
-                  id={card.id}
-                  style={{ marginLeft: "30px" }}
-                  className={classes.buttonCard}
-                  size="small"
-                  color="primary"
-                  onClick={handleAboutToggle}
-                >
-                  About Photo
-                </Button>
-                <Backdrop
-                  className={classes.backdrop}
-                  open={openAbout}
-                  onClick={handleAboutClose}
-                >
-                  <AboutPhoto buttonId={buttonId} cards={cards}></AboutPhoto>
                 </Backdrop>
               </CardActions>
             </Card>
