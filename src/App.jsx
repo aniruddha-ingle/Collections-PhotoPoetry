@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import {
   Typography,
   AppBar,
@@ -16,29 +16,27 @@ import ScrollView from "./components/ScrollView";
 import cards from "./components/CardsData";
 
 const App = () => {
-
   const classes = useStyles();
   const [viewKind, setViewKind] = useState("Description");
   const galleryViewHandler = () => {
-      setViewKind("Gallery");
-    }
+    setViewKind("Gallery");
+  };
   const descViewHandler = () => {
     setViewKind("Description");
-  }
+  };
   const scrollViewHandler = () => {
     setViewKind("Scroll");
-  }
+  };
   const viewHandler = () => {
-    if(viewKind === "Gallery") return <GalleryView cards={cards} />
-    else if (viewKind === "Scroll") return <ScrollView cards={cards} />
-    else if (viewKind === "Description") return <Description/>
-  }
+    if (viewKind === "Gallery") return <GalleryView cards={cards} />;
+    else if (viewKind === "Scroll") return <ScrollView cards={cards} />;
+    else if (viewKind === "Description") return <Description />;
+  };
   return (
     <React.Fragment>
       <CssBaseline />
       <AppBar position="relative">
         <Toolbar className={classes.toolbar}>
-          -
           <PhotoCamera className={classes.icon} />
           <Typography variant="h6">Photographs of Poetic Memories</Typography>
         </Toolbar>
@@ -50,13 +48,14 @@ const App = () => {
               {"C O L L E C T I O N S"}
             </Typography>
             <Typography
-                variant="subtitle1"
-                align="center"
-                color="textPrimary"
-                gutterBottom
-                >
-                The goal of this project is to reconcile the <i>vision</i> of <b>Photography</b> with the <i>poise</i> of <b>Poetry</b>.
-                </Typography>
+              variant="subtitle1"
+              align="center"
+              color="textPrimary"
+              gutterBottom
+            >
+              The goal of this project is to reconcile the <i>vision</i> of{" "}
+              <b>Photography</b> with the <i>poise</i> of <b>Poetry</b>.
+            </Typography>
             <Typography
               variant="h6"
               align="center"
@@ -70,9 +69,12 @@ const App = () => {
               align="center"
               color="textSecondary"
             >
-              Who is a keen observer of his surroundings and maintains an aesthetic vault of many memories through his lens.
-              If we were at a college event or on a trip to the mountains with Rahul, it was customary for us to text him and ask for the lovely, tasteful, and candid memories he captured. 
-              When we did get the link, it was customary to hope we could find ourselves in those memories. 
+              Who is a keen observer of his surroundings and maintains an
+              aesthetic vault of many memories through his lens. If we were at a
+              college event or on a trip to the mountains with Rahul, it was
+              customary for us to text him and ask for the lovely, tasteful, and
+              candid memories he captured. When we did get the link, it was
+              customary to hope we could find ourselves in those memories.
             </Typography>
             <Typography
               variant="h6"
@@ -80,32 +82,58 @@ const App = () => {
               color="textPrimary"
               gutterBottom
             >
-               And Aniruddha Ingle
+              And Aniruddha Ingle
             </Typography>
             <Typography
               variant="subtitle1"
               align="center"
               color="textSecondary"
             >
-              Who is typing this with the intention of being your narrator through this journey, <i>kya scene?</i><br/> 
-              I met Rahul during my bachelor's degree, he was the senior that behaved like a kind older brother. 
-              His appreciation for my poetry and permision to use his pictures to build this website have made this project possible. Thanks, Rahul!
-               
+              Who is typing this with the intention of being your narrator
+              through this journey, <i>kya scene?</i>
+              <br />I met Rahul during my bachelor's degree, he was the senior
+              that behaved like a kind older brother. His appreciation for my
+              poetry and permision to use his pictures to build this website
+              have made this project possible. Thanks, Rahul!
             </Typography>
             <div className={classes.buttons}>
               <Grid container spacing={2} justify="center">
                 <Grid item>
-                  <Button onClick={galleryViewHandler} variant="contained" className={viewKind==="Gallery"? classes.buttonSelected : classes.button}>
+                  <Button
+                    onClick={galleryViewHandler}
+                    variant="contained"
+                    className={
+                      viewKind === "Gallery"
+                        ? classes.buttonSelected
+                        : classes.button
+                    }
+                  >
                     Gallery View
                   </Button>
                 </Grid>
                 <Grid item>
-                  <Button onClick={descViewHandler} variant="contained" className={viewKind==="Description" ? classes.buttonSelected : classes.button}>
+                  <Button
+                    onClick={descViewHandler}
+                    variant="contained"
+                    className={
+                      viewKind === "Description"
+                        ? classes.buttonSelected
+                        : classes.button
+                    }
+                  >
                     Description
                   </Button>
                 </Grid>
                 <Grid item>
-                  <Button onClick={scrollViewHandler} variant="contained" className={viewKind==="Scroll" ? classes.buttonSelected : classes.button}>
+                  <Button
+                    onClick={scrollViewHandler}
+                    variant="contained"
+                    className={
+                      viewKind === "Scroll"
+                        ? classes.buttonSelected
+                        : classes.button
+                    }
+                  >
                     Scroll View
                   </Button>
                 </Grid>
@@ -113,7 +141,7 @@ const App = () => {
             </div>
           </Container>
         </div>
-        <div style={{padding:"15px", backgroundColor:"#efe6dc"}}>
+        <div style={{ padding: "15px", backgroundColor: "#efe6dc" }}>
           {viewHandler()}
         </div>
         <footer className={classes.footer}>
