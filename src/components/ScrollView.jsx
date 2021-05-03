@@ -1,15 +1,11 @@
 import React from 'react';
 import {
     Typography,
-    Button,
     Card,
-    CardActions,
     CardContent,
     CardMedia,
     Grid,
     Container,
-    Backdrop,
-    createMuiTheme
 } from "@material-ui/core";
 import useStyles from "../styles";
 const ScrollView = ({cards}) => {
@@ -29,7 +25,7 @@ const ScrollView = ({cards}) => {
                     </Typography>
                     <CardMedia
                         className={classes.cardMedia}
-                        image="https://source.unsplash.com/random"
+                        image="./images/1.jpg"
                         title="Image Title"
                     />
                     <CardContent className={classes.cardContent}>
