@@ -45,8 +45,7 @@ const GalleryView = ({cards}) => {
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="https://source.unsplash.com/random"
-                    title="Image Title"
+                    image={card.image}
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography

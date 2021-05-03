@@ -14,18 +14,19 @@ import useStyles from "./styles";
 import GalleryView from "./components/GalleryView";
 import Description from "./components/Description";
 import ScrollView from "./components/ScrollView";
+import Images from "./images/index"
 
 const App = () => {
   const cards = [
-    { id: 1, title: "The Flower", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "], img_url:"../images/1.jpg" },
-    { id: 2, title: "Moon & Stars", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "], img_url:"../images/1.jpg" },
-    { id: 3, title: "Beauty & The Beast", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "], img_url:"../images/1.jpg" },
-    { id: 4, title: "Live, Laugh.", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "], img_url:"../images/1.jpg" },
-    { id: 5, title: "Fighter", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "], img_url:"../images/1.jpg" },
-    { id: 6, title: "Amnesty", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "], img_url:"../images/1.jpg" },
-    { id: 7, title: "Clement", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "], img_url:"../images/1.jpg" },
-    { id: 8, title: "Tumult", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "], img_url:"../images/1.jpg" },
-    { id: 9, title: "Bite.", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "], img_url:"../images/1.jpg" },
+    { id: 1, title: "The Flower", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "], image: Images.img_1},
+    { id: 2, title: "Moon & Stars", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "], image: Images.img_2},
+    { id: 3, title: "Beauty & The Beast", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "], image: Images.img_3},
+    { id: 4, title: "Live, Laugh.", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "], image: Images.img_4},
+    { id: 5, title: "Fighter", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "], image: Images.img_5},
+    { id: 6, title: "Amnesty", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "], image: Images.img_6},
+    { id: 7, title: "Clement", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "], image: Images.img_7},
+    { id: 8, title: "Tumult", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "], image: Images.img_8},
+    { id: 9, title: "Bite.", poem: ["Placeholder for Poem Number: "], about: ["This is about Photo Number: "], image: Images.img_9},
   ];
 
   const classes = useStyles();

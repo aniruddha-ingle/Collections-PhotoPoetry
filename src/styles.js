@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
+import { BorderAllRounded } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   sheet: {
@@ -42,8 +43,9 @@ const useStyles = makeStyles((theme) => ({
     borderColor: "#bc8c61",
   },
   cardMedia: {
-    paddingTop: "100%", // 16:9 ratio
-    height: "140",
+    paddingTop: "100%",
+    borderRadius: "25 px",
+    border: "2.75px solid black",
   },
   cardContent: {
     flexGrow: 1,
@@ -62,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardHolder: {
     padding: "50px 50px",
-    backgroundColor: "#d2bfad"
+    backgroundColor: "#ede5de"
   }
 }));
 
