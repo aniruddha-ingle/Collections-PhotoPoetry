@@ -8,8 +8,11 @@ import {
     Container,
 } from "@material-ui/core";
 import useStyles from "../styles";
+import img from "../images/1.jpg";
+
 const ScrollView = ({cards}) => {
     const classes = useStyles();
+
     return ( 
         <Container className={classes.cardGrid} maxWidth="md">
             <Grid container spacing={4}>
@@ -25,8 +28,9 @@ const ScrollView = ({cards}) => {
                     </Typography>
                     <CardMedia
                         className={classes.cardMedia}
-                        image="./images/1.jpg"
-                        title="Image Title"
+                        
+                        image={require("../images/"+ +".jpg").default}
+                        title="1"
                     />
                     <CardContent className={classes.cardContent}>
                         <Typography style={{ textAlign: "center" }} variant="h6">
@@ -34,6 +38,7 @@ const ScrollView = ({cards}) => {
                         This will be used to create a post
                         for Rahul's Images. This is a media card. This will be
                         used to create a post for Rahul's Images.
+                        {img_number.toString()}
                         </Typography>
                     </CardContent>
                     </Card>
