@@ -12,7 +12,6 @@ import {
 } from "@material-ui/core";
 import useStyles from "../styles";
 import Poem from "./Poem";
-import AboutPhoto from "./AboutPhoto";
 
 const GalleryView = ({ cards }) => {
   const classes = useStyles();
