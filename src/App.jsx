@@ -45,7 +45,7 @@ const App = () => {
         <div className={classes.container}>
           <Container maxWidth="md">
             <Typography variant="h1" align="center" color="textPrimary">
-              {"C O L L E C T I O N S"}
+              {"C O L L E C T I O N S 123"}
             </Typography>
             <Typography
               variant="subtitle1"
