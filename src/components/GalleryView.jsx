@@ -29,7 +29,7 @@ const GalleryView = ({ cards }) => {
     const id = e.currentTarget.id;
     console.log("Clicked Baby Bitch!");
     setbuttonId(id - 1);
-    setOpenPoem(!openPoem);
+    setOpenPoem(true);
   };
   const handleAboutToggle = (e) => {
     const id = e.currentTarget.id;
