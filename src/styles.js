@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
     background: "linear-gradient(45deg, #cbab89 70%, #bc8c61 100%)",
     padding: "20px 0",
   },
-  backdrop: {
+  poemRender: {
     zIndex: theme.zIndex.drawer + 1,
     background: "linear-gradient(45deg, #cbab89 70%, #bc8c61 100%)",
   },

@@ -73,7 +73,7 @@ const GalleryView = ({ cards }) => {
                   Read Poem
                 </Button>
                 <Backdrop
-                  className={classes.backdrop}
+                  className={classes.poemRender}
                   open={openPoem}
                   onClick={handlePoemClose}
                 >

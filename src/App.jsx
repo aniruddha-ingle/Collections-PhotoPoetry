@@ -45,7 +45,7 @@ const App = () => {
         <div className={classes.container}>
           <Container maxWidth="md">
             <Typography variant="h1" align="center" color="textPrimary">
-              {"C O L L E C T I O N S 123"}
+              {"C O L L E C T I O N S"}
             </Typography>
             <Typography
               variant="subtitle1"
@@ -108,7 +108,7 @@ const App = () => {
                         : classes.button
                     }
                   >
-                    Gallery View
+                    Photo Gallery
                   </Button>
                 </Grid>
                 <Grid item>
@@ -134,7 +134,7 @@ const App = () => {
                         : classes.button
                     }
                   >
-                    Scroll View
+                    PhotoPoetry
                   </Button>
                 </Grid>
               </Grid>
